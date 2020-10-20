@@ -1,12 +1,14 @@
 import React from 'react';
 import { Link } from 'gatsby';
+
 import headerStyles from './Header.module.scss';
+import logo from '../../images/logo.png';
 
 const Header = () => {
     return(
-        <div className="Header">
+        <div className={headerStyles.header_container}>
             <Link to={`/`} className='inline-block'>
-                <h3>Logo</h3>
+                <img src={logo} alt="Louis Alemar Logo" className={headerStyles.logo}/>
             </Link>
             <div className='float-right'>
                 <Link to={`/about/`} className={'inline-block ' + headerStyles.margin_right_20}>
